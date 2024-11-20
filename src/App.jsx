@@ -1,5 +1,16 @@
+import { Routes, Route } from 'react-router-dom';
+import { Home, Local, HomeHeader, LocalHeader } from '@/components';
 function App() {
-	return <h1 className=''>Hello world!</h1>;
+	const auth = false;
+	return (
+		<>
+			{auth ? <HomeHeader /> : <LocalHeader />}
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='/local' element={<Local />} />
+			</Routes>
+		</>
+	);
 }
 
 export default App;

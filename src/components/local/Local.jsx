@@ -1,0 +1,62 @@
+const Local = () => {
+	return (
+		<>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+			<div>Local</div>
+		</>
+	);
+};
+
+export default Local;

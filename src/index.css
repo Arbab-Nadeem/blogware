@@ -49,17 +49,17 @@
 
 /* Link Styles */
 a {
-	@apply underline hover:no-underline font-medium cursor-pointer transition-all duration-300 ease-in-out;
+	@apply cursor-pointer transition-all duration-300 ease-in-out;
 }
 
 /* Image Styles */
 img {
-	@apply max-w-full h-auto rounded-md shadow-md;
+	@apply max-w-full h-auto;
 }
 
 /* Button Styles */
 button {
-	@apply px-4 py-2 border border-solid rounded-md font-semibold transition-all duration-300 ease-in-out hover:scale-105;
+	@apply px-4 py-2 text-sm  transition-all;
 }
 button:disabled {
 	@apply opacity-50 cursor-not-allowed;
@@ -67,11 +67,11 @@ button:disabled {
 
 /* List Styles */
 ul {
-	@apply list-disc pl-6 leading-relaxed;
+	@apply list-disc pl-4 leading-relaxed;
 }
 
 ol {
-	@apply list-decimal pl-6 leading-relaxed;
+	@apply list-decimal pl-4 leading-relaxed;
 }
 
 li {
