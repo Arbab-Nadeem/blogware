@@ -11,40 +11,40 @@
 
 /* Heading Styles (H1 to H6) */
 .h1 {
-	@apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight tracking-tighter;
+	@apply text-[1.5rem] sm:text-[1.75rem] md:text-[2rem] lg:text-[2.25rem] xl:text-[2.5rem] font-bold leading-tight tracking-tight;
 }
 
 .h2 {
-	@apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-snug tracking-tight;
+	@apply text-[1.25rem] sm:text-[1.5rem] md:text-[1.75rem] lg:text-[2rem] xl:text-[2.25rem] font-semibold leading-tight tracking-tight;
 }
 
 .h3 {
-	@apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-normal tracking-normal;
+	@apply text-[1.125rem] sm:text-[1.25rem] md:text-[1.5rem] lg:text-[1.75rem] xl:text-[2rem] font-medium leading-snug tracking-normal;
 }
 
 .h4 {
-	@apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-relaxed tracking-wide;
+	@apply text-[1rem] sm:text-[1.125rem] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[1.75rem] font-medium leading-snug tracking-normal;
 }
 
 .h5 {
-	@apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium leading-relaxed tracking-wide;
+	@apply text-[0.875rem] sm:text-[1rem] md:text-[1.125rem] lg:text-[1.25rem] xl:text-[1.5rem] font-medium leading-relaxed tracking-wide;
 }
 
 .h6 {
-	@apply text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium leading-loose tracking-wider;
+	@apply text-[0.75rem] sm:text-[0.875rem] md:text-[1rem] lg:text-[1.125rem] xl:text-[1.25rem] font-medium leading-loose tracking-wider;
 }
 
 /* Body Text Styles */
 .body-1 {
-	@apply text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed tracking-normal;
+	@apply text-[0.875rem] sm:text-[0.9375rem] md:text-[1rem] lg:text-[1.125rem] xl:text-[1.25rem] leading-relaxed tracking-normal;
 }
 
 .body-2 {
-	@apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-snug tracking-tight;
+	@apply text-[0.75rem] sm:text-[0.8125rem] md:text-[0.875rem] lg:text-[1rem] xl:text-[1.125rem] leading-normal tracking-tight;
 }
 
 .body-3 {
-	@apply text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-tight tracking-tighter;
+	@apply text-[0.625rem] sm:text-[0.6875rem] md:text-[0.75rem] lg:text-[0.875rem] xl:text-[1rem] leading-snug tracking-tighter;
 }
 
 /* Link Styles */
@@ -59,7 +59,7 @@ img {
 
 /* Button Styles */
 button {
-	@apply px-4 py-2 text-sm  transition-all;
+	@apply text-sm  transition-all;
 }
 button:disabled {
 	@apply opacity-50 cursor-not-allowed;
@@ -80,4 +80,57 @@ li {
 
 caption {
 	@apply text-sm font-medium text-center my-2;
+}
+
+/* Common Classes */
+
+.container-size {
+	@apply w-[95%] md:w-[90%] mx-auto;
+}
+.flex-center {
+	@apply flex justify-center items-center;
+}
+
+.flex-start {
+	@apply flex justify-start items-center;
+}
+
+.flex-end {
+	@apply flex justify-end items-center;
+}
+
+.flex-between {
+	@apply flex justify-between items-center;
+}
+
+.flex-around {
+	@apply flex justify-around items-center;
+}
+
+.flex-evenly {
+	@apply flex justify-evenly items-center;
+}
+
+.flex-col-center {
+	@apply flex flex-col justify-center items-center;
+}
+
+.flex-col-start {
+	@apply flex flex-col justify-start items-start;
+}
+
+.flex-col-end {
+	@apply flex flex-col justify-end items-end;
+}
+
+.flex-col-between {
+	@apply flex flex-col justify-between items-center;
+}
+
+.flex-col-around {
+	@apply flex flex-col justify-around items-center;
+}
+
+.flex-col-evenly {
+	@apply flex flex-col justify-evenly items-center;
 }

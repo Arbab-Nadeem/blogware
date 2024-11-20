@@ -1,7 +1,9 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import { Logo } from '@/assets';
 import { nav } from '@/utils';
-import { useEffect, useState } from 'react';
+import { Auth } from '@/components';
 
 const LocalHeader = () => {
 	const [isActive, setIsActive] = useState(false);
@@ -33,6 +35,7 @@ const LocalHeader = () => {
 						<button className='hidden sm:flex items-center gap-5'>
 							Sign In
 						</button>
+						<Auth />
 					</div>
 					<button
 						className={`${isActive ? 'bg-color-3' : 'bg-color-1'} text-n-1 rounded-full px-3 py-2 font-medium`}
