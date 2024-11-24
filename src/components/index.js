@@ -11,4 +11,4 @@ export { default as SignIn } from './local/auth/SignIn';
 
 /* Global */
 
-export { default as Model } from './global/Model';
+export { default as Modal } from './global/Modal';

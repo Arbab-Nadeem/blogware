@@ -1,21 +1,21 @@
-import { Model } from '@/components';
 import { LiaTimesSolid } from 'react-icons/lia';
 import { FcGoogle } from 'react-icons/fc';
 import { MdFacebook } from 'react-icons/md';
 import { AiOutlineMail } from 'react-icons/ai';
 import { useState } from 'react';
 
-const Auth = () => {
-	const [createUser, setCreateUser] = useState(false);
-	return (
-		<Model>
-			<section className='fixed z-50 inset-10 md:inset-y-[5rem] md:inset-x-[20rem] bg-n-1 overflow-auto shadow-lg rounded-lg'>
-				<button className='absolute top-8 right-8 text-2xl opacity-50 hover:opacity-100'>
-					<LiaTimesSolid />
-				</button>
+import { Modal, SignIn, SignUp } from '@/components';
 
-				<div className='flex-col-center gap-[2rem] pt-10'>
-					<>
+const Auth = ({ modal, setModal }) => {
+	const [createUser, setCreateUser] = useState(false);
+	const [signInReq, setSignInReq] = useState('');
+
+	// Function to handle conditional rendering based on signInReq
+	const renderContent = () => {
+		switch (signInReq) {
+			case '':
+				return (
+					<div className='flex flex-col gap-12 justify-center items-center'>
 						<h3 className='h3 text-n-9'>
 							{createUser ? 'Join Blogware' : 'Welcome Back'}
 						</h3>
@@ -29,6 +29,7 @@ const Auth = () => {
 								title={`${createUser ? 'Sign Up' : 'Sign In'} with Facebook`}
 							/>
 							<Button
+								click={() => setSignInReq(createUser ? 'sign-up' : 'sign-in')}
 								icon={<AiOutlineMail className='text-rose-800' />}
 								title={`${createUser ? 'Sign Up' : 'Sign In'} with Email`}
 							/>
@@ -42,21 +43,47 @@ const Auth = () => {
 								{createUser ? 'Sign In' : 'Create One'}
 							</button>
 						</p>
-						<p className='md:w-[30rem] mx-auto body-3 text-n-9 text-center mb-5'>
-							Click &quot;Sign In&quot; to agree the Blogware's{' '}
-							<a href='#' className='text-color-5'>
-								Terms of services
-							</a>{' '}
-							and acknowledge that Blogware's{' '}
-							<a href='#' className='text-color-5'>
-								Privacy Policy
-							</a>{' '}
-							applies to you.
-						</p>
-					</>
+					</div>
+				);
+
+			case 'sign-in':
+				return <SignIn setSignInReq={setSignInReq} />;
+
+			case 'sign-up':
+				return <SignUp setSignInReq={setSignInReq} />;
+
+			default:
+				return null;
+		}
+	};
+
+	return (
+		<Modal modal={modal} setModal={setModal}>
+			<section
+				className={`fixed z-50 inset-1 md:inset-y-[2rem] md:inset-x-[20rem] bg-n-1 overflow-auto shadow-lg rounded-lg sm:min-w-96 ${modal ? 'visible opacity-100' : 'invisible opacity-0'} transition-all duration-500`}
+			>
+				<button
+					onClick={() => setModal(false)}
+					className='absolute top-6 md:top-8 right-4 md:right-8 text-2xl opacity-50 hover:opacity-100'
+				>
+					<LiaTimesSolid />
+				</button>
+				<div className='flex-col-center gap-[1.4rem] pt-10 '>
+					{renderContent()}
+					<p className='w-[90%] mx-auto body-3 text-n-9 text-center mb-5'>
+						Click &quot;Sign In&quot; to agree to Blogware's{' '}
+						<a href='#' className='text-color-5'>
+							Terms of services
+						</a>{' '}
+						and acknowledge that Blogware's{' '}
+						<a href='#' className='text-color-5'>
+							Privacy Policy
+						</a>{' '}
+						applies to you.
+					</p>
 				</div>
 			</section>
-		</Model>
+		</Modal>
 	);
 };
 

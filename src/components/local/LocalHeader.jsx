@@ -7,6 +7,7 @@ import { Auth } from '@/components';
 
 const LocalHeader = () => {
 	const [isActive, setIsActive] = useState(false);
+	const [modal, setModal] = useState(true);
 
 	useEffect(() => {
 		const scrollMe = () => {
@@ -32,12 +33,16 @@ const LocalHeader = () => {
 						))}
 					</div>
 					<div className='relative'>
-						<button className='hidden sm:flex items-center gap-5'>
+						<button
+							className='hidden sm:flex items-center gap-5'
+							onClick={() => setModal(true)}
+						>
 							Sign In
 						</button>
-						<Auth />
+						<Auth modal={modal} setModal={setModal} />
 					</div>
 					<button
+						onClick={() => setModal(true)}
 						className={`${isActive ? 'bg-color-3' : 'bg-color-1'} text-n-1 rounded-full px-3 py-2 font-medium`}
 					>
 						Get Started
