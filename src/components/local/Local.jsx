@@ -1,60 +1,10 @@
+import { Hero, Trending } from '@/components/local';
+
 const Local = () => {
 	return (
 		<>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
-			<div>Local</div>
+			<Hero />
+			<Trending />
 		</>
 	);
 };

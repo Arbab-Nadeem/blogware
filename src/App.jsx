@@ -1,13 +1,23 @@
+import { Navigate } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
-import { Home, Local, HomeHeader, LocalHeader } from '@/components';
+
+import { Home, HomeHeader } from '@/components/home';
+import { Local, LocalHeader } from '@/components/local';
+
 function App() {
-	const auth = false;
+	const currentUser = false;
 	return (
 		<>
-			{auth ? <HomeHeader /> : <LocalHeader />}
+			{currentUser ? <HomeHeader /> : <LocalHeader />}
 			<Routes>
-				<Route path='/' element={<Home />} />
-				<Route path='/local' element={<Local />} />
+				{currentUser && <Route path='/' element={<Home />} />}
+				{!currentUser && <Route path='/local' element={<Local />} />}
+				{
+					<Route
+						path='*'
+						element={<Navigate to={!currentUser ? '/local' : '/'} />}
+					/>
+				}
 			</Routes>
 		</>
 	);

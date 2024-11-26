@@ -4,7 +4,8 @@ import { MdFacebook } from 'react-icons/md';
 import { AiOutlineMail } from 'react-icons/ai';
 import { useState } from 'react';
 
-import { Modal, SignIn, SignUp } from '@/components';
+import { Modal } from '@/components/common';
+import { SignIn, SignUp } from '@/components/local';
 
 const Auth = ({ modal, setModal }) => {
 	const [createUser, setCreateUser] = useState(false);

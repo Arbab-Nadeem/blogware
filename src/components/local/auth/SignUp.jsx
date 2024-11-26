@@ -1,31 +1,31 @@
 const SignUp = ({ setSignInReq }) => {
 	return (
-		<section class='py-3 w-full'>
-			<div class='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'>
-				<div class='max-w-2xl mx-auto text-center'>
-					<h2 class='text-xl font-bold leading-tight text-black sm:text-2xl lg:text-3xl'>
+		<section className='py-3 w-full'>
+			<div className='px-4 mx-auto max-w-7xl sm:px-6 lg:px-8'>
+				<div className='max-w-2xl mx-auto text-center'>
+					<h2 className='text-xl font-bold leading-tight text-black sm:text-2xl lg:text-3xl'>
 						Sign Up with Email
 					</h2>
-					<p class='max-w-xl mx-auto mt-4 text-base leading-relaxed text-n-7'>
+					<p className='max-w-xl mx-auto mt-4 text-base leading-relaxed text-n-7'>
 						Create a free account
 					</p>
 				</div>
 
-				<div class='relative max-w-md mx-auto mt-4 w-full'>
-					<div class='overflow-hidden rounded-md'>
-						<div class='px-4 py-4 sm:px-8'>
+				<div className='relative max-w-md mx-auto mt-4 w-full'>
+					<div className='overflow-hidden rounded-md'>
+						<div className='px-4 py-4 sm:px-8'>
 							<form action='#' method='POST'>
-								<div class='space-y-5 '>
+								<div className='space-y-5 '>
 									<div className=''>
 										<label
-											for='username'
-											class='text-base font-medium text-n-9'
+											htmlFor='username'
+											className='text-base font-medium text-n-9'
 										>
 											{' '}
 											Username
 										</label>
-										<div class='mt-2 relative text-gray-400 focus-within:text-gray-600'>
-											<div class='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
+										<div className='mt-2 relative text-gray-400 focus-within:text-gray-600'>
+											<div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
 												<svg
 													xmlns='http://www.w3.org/2000/svg'
 													viewBox='0 0 24 24'
@@ -33,8 +33,7 @@ const SignUp = ({ setSignInReq }) => {
 													stroke='currentColor'
 													strokeWidth='2'
 													strokeLinejoin='round'
-													stroke-linejoin='round'
-													class='w-5 h-5'
+													className='w-5 h-5'
 												>
 													<path d='M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2' />
 													<circle cx='12' cy='7' r='4' />
@@ -46,19 +45,22 @@ const SignUp = ({ setSignInReq }) => {
 												name='username'
 												id='username'
 												placeholder='Enter your username'
-												class='block w-full py-4 pl-10 pr-4 text-color-3 placeholder-n-7 transition-all duration-200 bg-n-1 border border-n-5 rounded-md focus:outline-none focus:border-color-3 caret-color-3'
+												className='block w-full py-4 pl-10 pr-4 text-color-3 placeholder-n-7 transition-all duration-200 bg-n-1 border border-n-5 rounded-md focus:outline-none focus:border-color-3 caret-color-3'
 											/>
 										</div>
 									</div>
 									<div>
-										<label for='email' class='text-base font-medium text-n-9'>
+										<label
+											htmlFor='email'
+											className='text-base font-medium text-n-9'
+										>
 											{' '}
 											Email address{' '}
 										</label>
-										<div class='mt-2 relative text-gray-400 focus-within:text-gray-600'>
-											<div class='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
+										<div className='mt-2 relative text-gray-400 focus-within:text-gray-600'>
+											<div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
 												<svg
-													class='w-5 h-5'
+													className='w-5 h-5'
 													xmlns='http://www.w3.org/2000/svg'
 													fill='none'
 													viewBox='0 0 24 24'
@@ -66,7 +68,6 @@ const SignUp = ({ setSignInReq }) => {
 												>
 													<path
 														strokeLinejoin='round'
-														stroke-linejoin='round'
 														strokeWidth='2'
 														d='M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207'
 													/>
@@ -78,25 +79,25 @@ const SignUp = ({ setSignInReq }) => {
 												name='email'
 												id='email'
 												placeholder='Enter email to get started'
-												class='block w-full py-4 pl-10 pr-4 text-color-3 placeholder-n-7 transition-all duration-200 bg-n-1 border border-n-5 rounded-md focus:outline-none focus:border-color-3 caret-color-3'
+												className='block w-full py-4 pl-10 pr-4 text-color-3 placeholder-n-7 transition-all duration-200 bg-n-1 border border-n-5 rounded-md focus:outline-none focus:border-color-3 caret-color-3'
 											/>
 										</div>
 									</div>
 
 									<div>
-										<div class='flex items-center justify-between'>
+										<div className='flex items-center justify-between'>
 											<label
-												for='password'
-												class='text-base font-medium text-gray-900'
+												htmlFor='password'
+												className='text-base font-medium text-gray-900'
 											>
 												{' '}
 												Password{' '}
 											</label>
 										</div>
-										<div class='mt-2 relative text-gray-400 focus-within:text-gray-600'>
-											<div class='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
+										<div className='mt-2 relative text-gray-400 focus-within:text-gray-600'>
+											<div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
 												<svg
-													class='w-5 h-5'
+													className='w-5 h-5'
 													xmlns='http://www.w3.org/2000/svg'
 													fill='none'
 													viewBox='0 0 24 24'
@@ -104,7 +105,6 @@ const SignUp = ({ setSignInReq }) => {
 												>
 													<path
 														strokeLinejoin='round'
-														stroke-linejoin='round'
 														strokeWidth='2'
 														d='M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4'
 													/>
@@ -116,22 +116,22 @@ const SignUp = ({ setSignInReq }) => {
 												name='password'
 												id='password'
 												placeholder='Enter your password'
-												class='block w-full py-4 pl-10 pr-4 text-color-3 placeholder-n-7 transition-all duration-200 bg-n-1 border border-n-5 rounded-md focus:outline-none focus:border-color-3 caret-color-3'
+												className='block w-full py-4 pl-10 pr-4 text-color-3 placeholder-n-7 transition-all duration-200 bg-n-1 border border-n-5 rounded-md focus:outline-none focus:border-color-3 caret-color-3'
 											/>
 										</div>
 									</div>
 									<div>
-										<div class='flex items-center justify-between'>
+										<div className='flex items-center justify-between'>
 											<label
-												for='confirmPassword'
-												class='text-base font-medium text-gray-900'
+												htmlFor='confirmPassword'
+												className='text-base font-medium text-gray-900'
 											>
 												{' '}
 												Confirm Password{' '}
 											</label>
 										</div>
-										<div class='mt-2 relative text-gray-400 focus-within:text-gray-600'>
-											<div class='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
+										<div className='mt-2 relative text-gray-400 focus-within:text-gray-600'>
+											<div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
 												<svg
 													xmlns='http://www.w3.org/2000/svg'
 													viewBox='0 0 24 24'
@@ -139,8 +139,7 @@ const SignUp = ({ setSignInReq }) => {
 													stroke='currentColor'
 													strokeWidth='2'
 													strokeLinejoin='round'
-													stroke-linejoin='round'
-													class='w-5 h-5'
+													className='w-5 h-5'
 												>
 													<path d='M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z' />
 													<circle
@@ -157,7 +156,7 @@ const SignUp = ({ setSignInReq }) => {
 												name='confirmPassword'
 												id='confirmPassword'
 												placeholder='Confirm password'
-												class='block w-full py-4 pl-10 pr-4 text-color-3 placeholder-n-7 transition-all duration-200 bg-n-1 border border-n-5 rounded-md focus:outline-none focus:border-color-3 caret-color-3'
+												className='block w-full py-4 pl-10 pr-4 text-color-3 placeholder-n-7 transition-all duration-200 bg-n-1 border border-n-5 rounded-md focus:outline-none focus:border-color-3 caret-color-3'
 											/>
 										</div>
 									</div>
@@ -165,7 +164,7 @@ const SignUp = ({ setSignInReq }) => {
 									<div className='flex flex-row gap-3 justify-between items-baseline'>
 										<button
 											type='submit'
-											class='inline-flex items-center justify-center w-1/2 px-4 py-3 text-base font-semibold text-n-1 transition-all duration-200 bg-color-3 border border-transparent rounded-md focus:outline-none hover:bg-color-1 focus:bg-color-1'
+											className='inline-flex items-center justify-center w-1/2 px-4 py-3 text-base font-semibold text-n-1 transition-all duration-200 bg-color-3 border border-transparent rounded-md focus:outline-none hover:bg-color-1 focus:bg-color-1'
 										>
 											Sign Up
 										</button>
@@ -177,13 +176,13 @@ const SignUp = ({ setSignInReq }) => {
 										</button>
 									</div>
 
-									<div class='text-center'>
-										<p class='text-base w-full text-gray-600'>
+									<div className='text-center'>
+										<p className='text-base w-full text-gray-600'>
 											Already have an account?{' '}
 											<a
 												href='#'
 												title=''
-												class='font-medium text-color-5 transition-all duration-200 hover:text-color-3 hover:underline'
+												className='font-medium text-color-5 transition-all duration-200 hover:text-color-3 hover:underline'
 											>
 												Sign in
 											</a>

@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 
 import { Logo } from '@/assets';
 import { nav } from '@/utils';
-import { Auth } from '@/components';
+import { Auth } from '@/components/local';
+import { Button } from '@/components/common';
 
 const LocalHeader = () => {
 	const [isActive, setIsActive] = useState(false);
-	const [modal, setModal] = useState(true);
+	const [modal, setModal] = useState(false);
 
 	useEffect(() => {
 		const scrollMe = () => {
@@ -41,12 +42,12 @@ const LocalHeader = () => {
 						</button>
 						<Auth modal={modal} setModal={setModal} />
 					</div>
-					<button
+					<Button
 						onClick={() => setModal(true)}
-						className={`${isActive ? 'bg-color-3' : 'bg-color-1'} text-n-1 rounded-full px-3 py-2 font-medium`}
+						className={`${isActive ? 'bg-color-3' : 'bg-color-1'}`}
 					>
 						Get Started
-					</button>
+					</Button>
 				</div>
 			</div>
 		</header>

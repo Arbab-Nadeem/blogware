@@ -85,7 +85,7 @@ caption {
 /* Common Classes */
 
 .container-size {
-	@apply w-[95%] md:w-[90%] mx-auto;
+	@apply w-[90%] md:w-[80%] mx-auto;
 }
 .flex-center {
 	@apply flex justify-center items-center;
