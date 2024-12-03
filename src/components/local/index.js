@@ -2,6 +2,7 @@
 export { default as Local } from './Local';
 export { default as LocalHeader } from './LocalHeader';
 export { default as Trending } from './Trending';
+export { default as Discover } from './Discover';
 export { default as Hero } from './Hero';
 
 /* Local > Auth */

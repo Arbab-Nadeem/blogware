@@ -1,15 +1,45 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { LiaTimesSolid } from 'react-icons/lia';
 import { FcGoogle } from 'react-icons/fc';
 import { MdFacebook } from 'react-icons/md';
 import { AiOutlineMail } from 'react-icons/ai';
-import { useState } from 'react';
+import { signInWithPopup } from 'firebase/auth';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { toast } from 'react-toastify';
 
 import { Modal } from '@/components/common';
 import { SignIn, SignUp } from '@/components/local';
+import { auth, provider, db } from '@/firebase';
 
 const Auth = ({ modal, setModal }) => {
 	const [createUser, setCreateUser] = useState(false);
 	const [signInReq, setSignInReq] = useState('');
+	const navigate = useNavigate();
+
+	const googleAuth = async () => {
+		try {
+			const createUser = await signInWithPopup(auth, provider);
+			const { user } = createUser;
+			const userRef = doc(db, 'users', user.uid);
+			const userDoc = await getDoc(userRef);
+
+			if (!userDoc.exists()) {
+				await setDoc(userRef, {
+					userId: user.uid,
+					username: user.displayName,
+					email: user.email,
+					userImg: user.photoURL,
+					bio: '',
+				});
+				navigate('/');
+				toast.success('User has been successfully signed in');
+				setModal(false);
+			}
+		} catch (error) {
+			toast.error(error.message);
+		}
+	};
 
 	// Function to handle conditional rendering based on signInReq
 	const renderContent = () => {
@@ -22,6 +52,7 @@ const Auth = ({ modal, setModal }) => {
 						</h3>
 						<div className='flex-col-center gap-4 mx-auto w-fit'>
 							<Button
+								click={googleAuth}
 								icon={<FcGoogle />}
 								title={`${createUser ? 'Sign Up' : 'Sign In'} with Google`}
 							/>
