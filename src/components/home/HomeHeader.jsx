@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { GoSearch } from 'react-icons/go';
 import {
 	MdNotificationsNone,
 	MdEditNote,
@@ -10,8 +11,9 @@ import { Modal } from '@/components/common';
 import { Search, UserModal } from '@/components/home';
 import { useState } from 'react';
 
-const HomeHeader = () => {
+const HomeHeader = ({}) => {
 	const [modal, setModal] = useState(false);
+	const [searchModal, setSearchModal] = useState(false);
 	return (
 		<header className='border-b border-n-5'>
 			<div className='container-size h-[60px] flex-between'>
@@ -20,10 +22,16 @@ const HomeHeader = () => {
 					<Link to={'/'}>
 						<img src={Logo} alt='Logo' className='h-[2.5rem]' />
 					</Link>
-					<Search />
+					<Search modal={searchModal} setModal={setSearchModal} />
 				</div>
 				{/* Right Side */}
 				<div className='flex items-center gap-3 sm:gap-7'>
+					<span
+						className='flex sm:hidden text-xl text-n-8 cursor-pointer'
+						onClick={() => setSearchModal(true)}
+					>
+						<GoSearch />
+					</span>
 					<Link
 						to={'/write'}
 						className='hidden md:flex items-center justify-start gap-1.5 text-n-8'
