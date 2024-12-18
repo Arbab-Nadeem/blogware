@@ -13,7 +13,7 @@ const Search = ({ modal, setModal }) => {
 						modal
 							? 'visible opacity-100'
 							: 'invisible sm:visible sm:opacity-100 opacity-0'
-					} transition-all duration-200`}
+					} transition-all duration-100`}
 				>
 					<div className='flex items-center gap-1 bg-n-4 px-2 rounded-full relative border border-n-5 z-10'>
 						<div className='absolute top-1/2 transform -translate-y-1/2 left-4'>
@@ -24,7 +24,7 @@ const Search = ({ modal, setModal }) => {
 						<input
 							type='text'
 							placeholder='Search Medium'
-							className='w-full py-2 pl-10 rounded-full bg-transparent outline-none placeholder-n-7 text-gray-800 transition-all duration-300'
+							className='w-full py-2 pl-10 rounded-full bg-transparent outline-none placeholder-n-7 text-gray-800 transition-all duration-100'
 						/>
 					</div>
 				</div>

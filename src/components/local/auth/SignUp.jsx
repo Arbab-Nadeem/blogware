@@ -141,7 +141,7 @@ const SignUp = ({ setSignInReq }) => {
 													name='username'
 													id='username'
 													placeholder='Enter your username'
-													className='block w-full py-4 pl-10 pr-4 text-color-3 placeholder-n-7 transition-all duration-200 bg-n-1 border border-n-5 rounded-md focus:outline-none focus:border-color-3 caret-color-3'
+													className='block w-full py-4 pl-10 pr-4 text-color-3 placeholder-n-7 transition-all duration-100 bg-n-1 border border-n-5 rounded-md focus:outline-none focus:border-color-3 caret-color-3'
 												/>
 											</div>
 											{error.username && (
@@ -182,7 +182,7 @@ const SignUp = ({ setSignInReq }) => {
 													name='email'
 													id='email'
 													placeholder='Enter email to get started'
-													className='block w-full py-4 pl-10 pr-4 text-color-3 placeholder-n-7 transition-all duration-200 bg-n-1 border border-n-5 rounded-md focus:outline-none focus:border-color-3 caret-color-3'
+													className='block w-full py-4 pl-10 pr-4 text-color-3 placeholder-n-7 transition-all duration-100 bg-n-1 border border-n-5 rounded-md focus:outline-none focus:border-color-3 caret-color-3'
 												/>
 											</div>
 											{error.email && (
@@ -226,7 +226,7 @@ const SignUp = ({ setSignInReq }) => {
 													name='password'
 													id='password'
 													placeholder='Enter your password'
-													className='block w-full py-4 pl-10 pr-4 text-color-3 placeholder-n-7 transition-all duration-200 bg-n-1 border border-n-5 rounded-md focus:outline-none focus:border-color-3 caret-color-3'
+													className='block w-full py-4 pl-10 pr-4 text-color-3 placeholder-n-7 transition-all duration-100 bg-n-1 border border-n-5 rounded-md focus:outline-none focus:border-color-3 caret-color-3'
 												/>
 											</div>
 											{error.password && (
@@ -273,7 +273,7 @@ const SignUp = ({ setSignInReq }) => {
 													name='confirmPassword'
 													id='confirmPassword'
 													placeholder='Confirm password'
-													className='block w-full py-4 pl-10 pr-4 text-color-3 placeholder-n-7 transition-all duration-200 bg-n-1 border border-n-5 rounded-md focus:outline-none focus:border-color-3 caret-color-3'
+													className='block w-full py-4 pl-10 pr-4 text-color-3 placeholder-n-7 transition-all duration-100 bg-n-1 border border-n-5 rounded-md focus:outline-none focus:border-color-3 caret-color-3'
 												/>
 											</div>
 											{error.confirmPassword && (
@@ -286,7 +286,7 @@ const SignUp = ({ setSignInReq }) => {
 										<div className='flex flex-row gap-3 justify-between items-baseline'>
 											<button
 												type='submit'
-												className={`inline-flex items-center justify-center w-1/2 px-4 py-3 text-base font-semibold text-n-1 transition-all duration-200 bg-color-3 border border-transparent rounded-md focus:outline-none hover:bg-color-1 focus:bg-color-1 ${loading ? 'opacity-40 pointer-events-none' : ''}`}
+												className={`inline-flex items-center justify-center w-1/2 px-4 py-3 text-base font-semibold text-n-1 transition-all duration-100 bg-color-3 border border-transparent rounded-md focus:outline-none hover:bg-color-1 focus:bg-color-1 ${loading ? 'opacity-40 pointer-events-none' : ''}`}
 											>
 												Sign Up
 											</button>
@@ -304,7 +304,7 @@ const SignUp = ({ setSignInReq }) => {
 												<a
 													href='#'
 													title=''
-													className='font-medium text-color-5 transition-all duration-200 hover:text-color-3 hover:underline'
+													className='font-medium text-color-5 transition-all duration-100 hover:text-color-3 hover:underline'
 												>
 													Sign in
 												</a>

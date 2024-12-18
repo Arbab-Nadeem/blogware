@@ -19,7 +19,7 @@ const LocalHeader = () => {
 	}, []);
 	return (
 		<header
-			className={`border-b transition-all duration-500 ${isActive ? 'bg-n-2' : 'bg-n-1'} border-n-7 sticky z-50 top-0`}
+			className={`border-b transition-all duration-200 ${isActive ? 'bg-n-2' : 'bg-n-1'} border-n-7 sticky z-50 top-0`}
 		>
 			<div className='container-size h-[70px] flex-between'>
 				<Link to={'/'}>

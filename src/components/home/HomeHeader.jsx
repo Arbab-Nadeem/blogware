@@ -57,9 +57,9 @@ const HomeHeader = ({}) => {
 						</div>
 						<Modal modal={modal} setModal={setModal}>
 							<div
-								className={`${modal ? 'visible opacity-100' : 'invisible opacity-0'} transition-all duration-200`}
+								className={`${modal ? 'visible opacity-100' : 'invisible opacity-0'} transition-all duration-100`}
 							>
-								<UserModal />
+								<UserModal setModal={setModal} />
 							</div>
 						</Modal>
 					</div>

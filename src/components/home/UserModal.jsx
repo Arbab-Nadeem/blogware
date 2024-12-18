@@ -7,9 +7,11 @@ import { Link } from 'react-router-dom';
 
 import { useAppContext } from '@/contexts/ContextProvider';
 import { secretEmail } from '@/utils/helper';
+import { useNavigate } from 'react-router-dom';
 
-const UserModal = () => {
-	const { currentUser } = useAppContext();
+const UserModal = ({ setModal }) => {
+	const { currentUser, setCurrentUser } = useAppContext();
+	const navigate = useNavigate();
 	const userModal = [
 		{
 			id: 1,
@@ -36,6 +38,11 @@ const UserModal = () => {
 			path: `/stats`,
 		},
 	];
+
+	const handleLogout = () => {
+		setCurrentUser(null);
+		navigate('/local');
+	};
 	return (
 		<section className='absolute w-[18rem] p-6 bg-n-2 right-0 top-[100%] shadow-lg rounded-md z-50 text-n-9'>
 			<Link
@@ -50,6 +57,7 @@ const UserModal = () => {
 			<div className='flex flex-col gap-4 border-b border-b-n-6 pb-5'>
 				{userModal.map((item) => (
 					<Link
+						onClick={() => setModal(false)}
 						key={item.id}
 						to={item.path}
 						className='flex gap-2 text-n-8 hover:text-n-9 transition-all'
@@ -61,7 +69,10 @@ const UserModal = () => {
 					</Link>
 				))}
 			</div>
-			<button className='flex flex-col pt-5 cursor-pointer text-n-8 hover:text-n-9 transition-all'>
+			<button
+				className='flex flex-col pt-5 cursor-pointer text-n-8 hover:text-n-9 transition-all'
+				onClick={() => handleLogout()}
+			>
 				Sign Out
 				<span className='text-sm'>{secretEmail(currentUser?.email)}</span>
 			</button>

@@ -92,7 +92,7 @@ const Auth = ({ modal, setModal }) => {
 	return (
 		<Modal modal={modal} setModal={setModal}>
 			<section
-				className={`fixed z-50 inset-1 md:inset-y-[2rem] md:inset-x-[20rem] bg-n-1 overflow-auto shadow-lg rounded-lg sm:min-w-96 ${modal ? 'visible opacity-100' : 'invisible opacity-0'} transition-all duration-500`}
+				className={`fixed z-50 inset-1 md:inset-y-[2rem] md:inset-x-[20rem] bg-n-1 overflow-auto shadow-lg rounded-lg sm:min-w-96 ${modal ? 'visible opacity-100' : 'invisible opacity-0'} transition-all duration-200`}
 			>
 				<button
 					onClick={() => setModal(false)}
